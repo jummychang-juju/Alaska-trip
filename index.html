@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>阿拉斯加極光行程 2027</title>
+<style>
+:root{
+  --page:#F6F8FC;
+  --page-2:#E9EEF7;
+  --card:#FFFFFF;
+  --line:#C2CDE0;
+  --ink:#111A2E;
+  --dim:#41506E;
+  --aurora:#0C6E4C;
+  --aurora-2:#0F5C93;
+  --violet:#57379E;
+  --amber:#8A5300;
+  --rose:#A81734;
+  --head:#050B18;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--page);
+  color:var(--ink);
+  font-family:"PingFang TC","Hiragino Sans TC","Noto Sans TC","Microsoft JhengHei",-apple-system,sans-serif;
+  font-size:15px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:64px;
+}
+.wrap{max-width:780px;margin:0 auto;padding:0 16px}
+
+header{position:relative;overflow:hidden;padding:44px 0 32px;border-bottom:2px solid var(--line);background:var(--page-2)}
+.veil{position:absolute;inset:0;pointer-events:none;opacity:.35}
+.veil span{
+  position:absolute;left:-30%;width:160%;height:150px;border-radius:50%;
+  filter:blur(38px);animation:drift 22s ease-in-out infinite;
+}
+.veil span:nth-child(1){top:-40px;background:linear-gradient(90deg,transparent,#3FD39B,transparent)}
+.veil span:nth-child(2){top:20px;background:linear-gradient(90deg,transparent,#4FB6E8,transparent);animation-delay:-7s}
+.veil span:nth-child(3){top:80px;background:linear-gradient(90deg,transparent,#9B7BE8,transparent);animation-delay:-13s}
+@keyframes drift{
+  0%,100%{transform:translateX(-6%) skewY(-2deg)}
+  50%{transform:translateX(8%) skewY(2.5deg)}
+}
+@media (prefers-reduced-motion:reduce){.veil span{animation:none}}
+.eyebrow{position:relative;font-size:11px;letter-spacing:.24em;color:var(--aurora);
+  text-transform:uppercase;font-weight:800;margin-bottom:12px}
+h1{position:relative;font-size:34px;line-height:1.2;font-weight:800;color:var(--head);letter-spacing:-.01em}
+h1 em{font-style:normal;display:block;font-size:16px;font-weight:600;color:var(--dim);letter-spacing:.04em;margin-top:12px}
+.facts{position:relative;display:flex;gap:26px;margin-top:24px;flex-wrap:wrap}
+.fact b{display:block;font-size:22px;color:var(--head);font-weight:800;font-variant-numeric:tabular-nums}
+.fact span{font-size:12px;color:var(--dim);letter-spacing:.06em;font-weight:600}
+
+nav{position:sticky;top:0;z-index:20;background:rgba(246,248,252,.97);border-bottom:2px solid var(--line)}
+.tabs{display:flex;overflow-x:auto;scrollbar-width:none;max-width:780px;margin:0 auto;padding:0 10px}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{
+  flex:0 0 auto;background:none;border:0;color:var(--dim);font:inherit;font-size:15px;font-weight:600;
+  padding:15px 14px;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;
+}
+.tabs button[aria-selected="true"]{color:var(--aurora);border-bottom-color:var(--aurora);font-weight:800}
+.tabs button:focus-visible{outline:3px solid var(--aurora-2);outline-offset:-4px}
+
+section[hidden]{display:none}
+section{padding-top:28px}
+h2{font-size:13px;letter-spacing:.14em;color:var(--aurora);font-weight:800;margin:34px 0 14px;text-transform:uppercase}
+h2:first-child{margin-top:0}
+
+.card{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:12px}
+.row{display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+.row+.row{margin-top:11px;padding-top:11px;border-top:1px solid var(--line)}
+.k{color:var(--dim);font-size:13.5px;font-weight:600;flex:0 0 auto}
+.v{text-align:right;color:var(--ink);font-weight:600}
+.mono{font-variant-numeric:tabular-nums;letter-spacing:.02em}
+
+.tag{display:inline-block;font-size:11.5px;padding:3px 10px;border-radius:99px;font-weight:800;letter-spacing:.02em;vertical-align:middle}
+.t-ok{background:#D2F2E4;color:#0A5A3E;border:1px solid #7FCFAF}
+.t-wait{background:#FBEBCB;color:#7A4900;border:1px solid #DDAF5E}
+.t-warn{background:#FBDBE1;color:#8F0F2B;border:1px solid #E293A4}
+.t-kid{background:#E6DEF9;color:#472C86;border:1px solid #B7A2E6}
+
+.day{position:relative;padding-left:26px;margin-bottom:10px}
+.day::before{content:"";position:absolute;left:6px;top:26px;bottom:-10px;width:2px;background:var(--line)}
+.day:last-child::before{display:none}
+.dot{position:absolute;left:0;top:16px;width:14px;height:14px;border-radius:50%;background:var(--card);border:3px solid var(--line)}
+.day.aurora .dot{border-color:var(--aurora);background:var(--aurora);box-shadow:0 0 0 4px rgba(12,110,76,.16)}
+.dhead{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
+.ddate{font-size:18px;font-weight:800;color:var(--head);font-variant-numeric:tabular-nums}
+.dwk{font-size:12.5px;color:var(--dim);font-weight:600}
+.dbody{font-size:15px;color:var(--ink)}
+.dbody b{color:var(--head);font-weight:800}
+.dmeta{font-size:13px;color:var(--dim);margin-top:9px;padding-top:9px;border-top:1px solid var(--line);font-weight:600}
+.dmeta b{color:var(--ink);font-weight:800}
+
+.note{font-size:13.5px;color:var(--dim);border-left:4px solid var(--line);padding-left:14px;margin:14px 0;font-weight:500}
+.note b{color:var(--rose);font-weight:800}
+ul{padding-left:20px;font-size:15px}
+li{margin-bottom:9px}
+li b{color:var(--head);font-weight:800}
+
+.todo{display:flex;gap:14px;align-items:flex-start}
+.num{flex:0 0 30px;height:30px;border-radius:8px;background:var(--page-2);border:2px solid var(--line);
+  display:grid;place-items:center;font-size:12.5px;font-weight:800;color:var(--aurora)}
+.todo p{font-size:13.5px;color:var(--dim);margin-top:4px;font-weight:500}
+.todo strong{color:var(--head);font-weight:800;font-size:15px}
+
+footer{text-align:center;font-size:12.5px;color:var(--dim);padding:36px 0 12px;font-weight:600}
+
+.plink{display:block;font-size:16px;font-weight:800;color:var(--aurora-2);text-decoration:none;line-height:1.4}
+.plink:hover{text-decoration:underline}
+.plink::after{content:" ↗";font-size:12px;color:var(--dim)}
+.pdesc{font-size:13.5px;color:var(--dim);margin-top:5px;font-weight:500}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="veil"><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="eyebrow">Alaska · Aurora Borealis</div>
+    <h1>阿拉斯加極光行程<em>安克雷奇 — 費爾班克斯 — 拉斯維加斯</em></h1>
+    <div class="facts">
+      <div class="fact"><b>1/20–2/3</b><span>2027</span></div>
+      <div class="fact"><b>15</b><span>天</span></div>
+      <div class="fact"><b>4</b><span>次極光觀測</span></div>
+      <div class="fact"><b>9</b><span>人同行</span></div>
+    </div>
+  </div>
+</header>
+
+<nav><div class="tabs" role="tablist">
+  <button role="tab" aria-selected="true" data-t="p1">行程</button>
+  <button role="tab" aria-selected="false" data-t="p0">同行</button>
+  <button role="tab" aria-selected="false" data-t="p2">交通</button>
+  <button role="tab" aria-selected="false" data-t="p3">住宿</button>
+  <button role="tab" aria-selected="false" data-t="p4">裝備</button>
+  <button role="tab" aria-selected="false" data-t="p5">注意</button>
+  <button role="tab" aria-selected="false" data-t="p7">Vegas</button>
+</div></nav>
+
+<main class="wrap">
+
+<!-- 行程 -->
+<section id="p1">
+  <h2>阿拉斯加 · 9 天</h2>
+
+  <div class="day"><div class="dot"></div>
+    <div class="dhead"><span class="ddate">1/20</span><span class="dwk">週三</span></div>
+    <div class="dbody">抵達安克雷奇（ANC）。阿拉斯加酒店 16:00 後可辦入住。</div>
+    <div class="dmeta">安克雷奇</div>
+  </div>
+
+  <div class="day"><div class="dot"></div>
+    <div class="dhead"><span class="ddate">1/21</span><span class="dwk">週四</span></div>
+    <div class="dbody">早上酒店集合出發，<b>馬塔努斯卡冰川</b>健行，專業嚮導帶領約 2 小時。免費提供頭盔與防滑鞋鏈，需簽署免責聲明。</div>
+    <div class="dmeta">安克雷奇　·　建議羽絨服、防滑雪地靴、墨鏡</div>
+  </div>
+
+  <div class="day"><div class="dot"></div>
+    <div class="dhead"><span class="ddate">1/22</span><span class="dwk">週五</span></div>
+    <div class="dbody">10:00 出發，<b>坦納根海灣</b>仙境一日遊。白鯨點拍照、Alyeska 滑雪度假村觀景纜車登頂、Balto 紀念碑、地震公園與庫克船長紀念碑，市中心免稅購物約 1 小時。16:00 回酒店。</div>
+    <div class="dmeta">安克雷奇</div>
+  </div>
+
+  <div class="day aurora"><div class="dot"></div>
+    <div class="dhead"><span class="ddate">1/23</span><span class="dwk">週六</span><span class="tag t-ok">極光 1</span></div>
+    <div class="dbody"><b>北極光號列車</b>北上費爾班克斯，08:30 發車、20:00 抵達，冬季僅週末行駛。22:00 搭極光班車前往<b>極光觀測木屋</b>，導遊教相機參數與拍攝技巧，屋內有熱飲與極光監測螢幕。次日 02:00 回酒店。</div>
+    <div class="dmeta">費爾班克斯　·　極光班車導遊小費現場自付</div>
+  </div>
+
+  <div class="day aurora"><div class="dot"></div>
+    <div class="dhead"><span class="ddate">1/24</span><span class="dwk">週日</span><span class="tag t-ok">極光 2</span></div>
+    <div class="dbody">上午酒店休息。<b>狗拉雪橇</b>體驗 20–25 分鐘，前往<b>北極村</b>聖誕老人之家（16 公尺高聖誕老人雕像），再到阿拉斯加大學<b>北方極地博物館</b>。傍晚入住山頂玻璃屋。</div>
+    <div class="dmeta">Cleary Summit 極光玻璃屋</div>
+  </div>
+
+  <div class="day aurora"><div class="dot"></div>
+    <div class="dhead"><span class="ddate">1/25</span><span class="dwk">週一</span><span class="tag t-ok">極光 3</span></div>
+    <div class="dbody"><b>冰湖垂釣及燒烤之旅</b>，湖上木屋冰釣，往返全程約 4 小時。16 歲以上需另購釣魚執照。漁獲無法保證。</div>
+    <div class="dmeta">Cleary Summit 極光玻璃屋</div>
+  </div>
+
+  <div class="day aurora"><div class="dot"></div>
+    <div class="dhead"><span class="ddate">1/26</span><span class="dwk">週二</span><span class="tag t-ok">極光 4</span></div>
+    <div class="dbody">11:00 出發，參觀<b>阿拉斯加輸油管道</b>，前往<b>珍娜溫泉</b>度假村泡湯，往返約 7 小時。可加購參觀全球唯一全年開放的冰雕博物館。22:00 再赴極光木屋，次日 02:00 返回。</div>
+    <div class="dmeta">費爾班克斯　·　<b>須自備泳衣</b></div>
+  </div>
+
+  <div class="day"><div class="dot"></div>
+    <div class="dhead"><span class="ddate">1/27</span><span class="dwk">週三</span></div>
+    <div class="dbody">10:00 出發，<b>迪納利國家公園</b>健行之旅，往返全程約 7–8 小時。持證導遊帶領短程戶外健行，近距離感受北美第一高峰。</div>
+    <div class="dmeta">費爾班克斯</div>
+  </div>
+
+  <div class="day"><div class="dot"></div>
+    <div class="dhead"><span class="ddate">1/28</span><span class="dwk">週四</span><span class="tag t-wait">離團</span></div>
+    <div class="dbody">結束阿拉斯加行程，酒店退房時間中午 12:00，轉往拉斯維加斯。</div>
+    <div class="dmeta">拉斯維加斯</div>
+  </div>
+
+  <h2>拉斯維加斯 · 自由行</h2>
+
+  <div class="day"><div class="dot"></div>
+    <div class="dhead"><span class="ddate">1/29–1/31</span><span class="dwk">五 · 六 · 日</span></div>
+    <div class="dbody">拉斯維加斯停留三天，行程自訂。</div>
+  </div>
+
+  <div class="day"><div class="dot"></div>
+    <div class="dhead"><span class="ddate">2/1</span><span class="dwk">週一</span></div>
+    <div class="dbody">拉斯維加斯飛西雅圖。</div>
+  </div>
+
+  <div class="day"><div class="dot"></div>
+    <div class="dhead"><span class="ddate">2/2 → 2/3</span><span class="dwk">二 · 三</span></div>
+    <div class="dbody">西雅圖搭夜間班機返台，2/3 清晨抵達桃園。</div>
+    <div class="dmeta">美國境內班機請提前 2 小時抵達機場</div>
+  </div>
+</section>
+
+<!-- 同行 -->
+<section id="p0" hidden>
+  <h2>大人 6 位</h2>
+  <div class="card">
+    <div class="row"><span class="k">　</span><span class="v">詩倩　·　律帆　·　小白<br>怡芳　·　信貝　·　月英</span></div>
+  </div>
+
+  <h2>孩子 3 位</h2>
+  <div class="card">
+    <div class="row"><span class="k">　</span><span class="v">芮芃　·　學胤　·　硯岑</span></div>
+  </div>
+
+  <h2>房型</h2>
+  <div class="card">
+    <div class="row"><span class="k">配置</span><span class="v">3 間雙人房<br>3 位孩子不佔床</span></div>
+    <div class="row"><span class="k">備註</span><span class="v">玻璃屋兩晚房型另行確認</span></div>
+  </div>
+</section>
+
+<!-- 交通 -->
+<section id="p2" hidden>
+  <h2>整趟動線</h2>
+  <div class="card">
+    <div class="row"><span class="k">1/20</span><span class="v">桃園 → 西雅圖（直飛）</span></div>
+    <div class="row"><span class="k">1/20 晚</span><span class="v">西雅圖 → 安克雷奇（國內線）</span></div>
+    <div class="row"><span class="k">1/23</span><span class="v">安克雷奇 → 費爾班克斯<br><b>北極光號列車</b> 08:30–20:00</span></div>
+    <div class="row"><span class="k">1/28</span><span class="v">費爾班克斯 → 拉斯維加斯</span></div>
+    <div class="row"><span class="k">2/1</span><span class="v">拉斯維加斯 → 西雅圖</span></div>
+    <div class="row"><span class="k">2/2</span><span class="v">西雅圖 → 桃園（夜間直飛）</span></div>
+  </div>
+
+  <h2>北極光號列車</h2>
+  <div class="card">
+    <div class="row"><span class="k">路線</span><span class="v">安克雷奇 → 費爾班克斯</span></div>
+    <div class="row"><span class="k">時間</span><span class="v mono">1/23 週六　08:30 → 20:00</span></div>
+    <div class="row"><span class="k">車程</span><span class="v">約 12 小時</span></div>
+    <div class="row"><span class="k">班次</span><span class="v">冬季僅週末行駛</span></div>
+  </div>
+  <div class="note">阿拉斯加鐵路是州內獨立系統，與美國本土鐵路網不相連。西雅圖到安克雷奇只能搭飛機，航程約 3 小時 45 分，安克雷奇比西雅圖慢 1 小時。</div>
+</section>
+
+<!-- 住宿 -->
+<section id="p3" hidden>
+  <h2>安克雷奇 · 3 晚</h2>
+  <div class="card">
+    <div class="row"><span class="k">1/20 – 1/22</span><span class="v">Fairfield Inn &amp; Suites<br>Anchorage Midtown（或同級）</span></div>
+  </div>
+
+  <h2>費爾班克斯 · 3 晚</h2>
+  <div class="card">
+    <div class="row"><span class="k">1/23、1/26、1/27</span><span class="v">Hyatt Place Fairbanks<br>或 Westmark Fairbanks（或同級）</span></div>
+  </div>
+
+  <h2>極光玻璃屋 · 2 晚</h2>
+  <div class="card">
+    <div class="row"><span class="k">1/24 – 1/25</span><span class="v">The Overlook at Cleary Summit</span></div>
+    <div class="row"><span class="k">位置</span><span class="v">費爾班克斯城外東北方<br>Cleary Summit 山頂</span></div>
+    <div class="row"><span class="k">設施</span><span class="v">180° 全景玻璃窗、按摩雙人床<br>暖氣、獨立衛浴、吹風機<br>含美式早餐</span></div>
+  </div>
+  <div class="note">2023 年落成，獨棟設計，屋前無遮擋，可在室內守候極光。</div>
+
+  <h2>拉斯維加斯</h2>
+  <div class="card">
+    <div class="row"><span class="k">1/28 – 2/1</span><span class="v">共 4 晚 <span class="tag t-wait">另行安排</span></span></div>
+  </div>
+</section>
+
+<!-- 裝備 -->
+<section id="p4" hidden>
+  <h2>禦寒衣物</h2>
+  <ul>
+    <li>羽絨外套（長版為佳）</li>
+    <li>抓絨衣、發熱衣等中層</li>
+    <li>毛帽、圍巾、防風手套</li>
+    <li>防滑雪地靴</li>
+    <li>厚襪多備幾雙</li>
+    <li>墨鏡（雪地反光強）</li>
+  </ul>
+
+  <h2>特定行程用</h2>
+  <ul>
+    <li><b>泳衣</b> — 珍娜溫泉泡湯必備</li>
+    <li>暖暖包 — 極光木屋等待時間長</li>
+    <li>護唇膏、乳液 — 室內外溫差大、極乾燥</li>
+  </ul>
+
+  <h2>拍極光</h2>
+  <ul>
+    <li>相機與腳架</li>
+    <li>備用電池多帶，低溫掉電極快</li>
+    <li>記憶卡</li>
+    <li>手機保暖套或放內袋，避免瞬間關機</li>
+  </ul>
+
+  <h2>其他</h2>
+  <ul>
+    <li>轉接頭（美規）與行動電源</li>
+    <li>個人常備藥品</li>
+    <li>保溫瓶</li>
+  </ul>
+</section>
+
+<!-- 注意 -->
+<section id="p5" hidden>
+  <h2>行程強度</h2>
+  <div class="card">
+    <div class="row"><span class="k">1/21</span><span class="v">冰川雪地健行 2 小時</span></div>
+    <div class="row"><span class="k">1/23</span><span class="v">火車 12 小時<br>當晚極光至凌晨 2 點</span></div>
+    <div class="row"><span class="k">1/26</span><span class="v">溫泉往返 7 小時<br>當晚極光至凌晨 2 點</span></div>
+    <div class="row"><span class="k">1/27</span><span class="v">迪納利往返 7–8 小時</span></div>
+  </div>
+  <div class="note">1/23 與 1/26 兩天都會到凌晨才休息，隔天請留意體力分配。長輩與孩子可視情況調整參與項目。</div>
+
+  <h2>年齡限制</h2>
+  <ul>
+    <li>珍娜溫泉：18 歲以下不得進入戶外岩石溫泉區，僅能使用室內按摩池與游泳池</li>
+    <li>冰釣執照：16 歲以上須另行購買</li>
+    <li>冰酒吧調酒：須年滿 21 歲並持有效證件</li>
+  </ul>
+
+  <h2>現場自付</h2>
+  <ul>
+    <li>極光班車導遊小費（每人每晚，共兩晚）</li>
+    <li>冰釣執照費</li>
+    <li>冰雕博物館門票（選擇性）</li>
+    <li>午餐、晚餐全程自理</li>
+  </ul>
+
+  <h2>其他</h2>
+  <ul>
+    <li>極光受天候影響，無法保證看得到</li>
+    <li>行程順序可能依天氣與出團日調整，以出團通知與導遊現場說明為準</li>
+    <li>酒店入住為 16:00 後，退房為中午 12:00</li>
+    <li>冰川健行須遵從嚮導指示並簽署免責聲明</li>
+    <li>美國境內班機請提前 2 小時抵達機場</li>
+  </ul>
+</section>
+
+<!-- Vegas -->
+<section id="p7" hidden>
+  <div class="note">以下每個名稱都可點開 Google 地圖，出國後直接導航。★ 為特別推薦。</div>
+  <h2>食 · 必吃</h2>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.106369,-115.1724948&amp;query_place_id=ChIJy-Z4IADFyIARUJtRr3cN2P0" target="_blank" rel="noopener">In-N-Out Burger（全美最大店）</a><div class="pdesc">3747 S Las Vegas Blvd · 10:30–翌1:00｜點 Double-Double, Animal Style。就在 M&amp;M's 對面</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1174161,-115.1699447&amp;query_place_id=ChIJoxirzyrFyIARHdJoX3i1NJg" target="_blank" rel="noopener">In-N-Out Burger（Strip 中段）</a><div class="pdesc">3545 S Las Vegas Blvd · 雙層堡＋薯條＋飲料約 $11</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1336884,-115.1632833&amp;query_place_id=ChIJo2QZEG3EyIARuHyQ4XC29RY" target="_blank" rel="noopener">Peppermill Restaurant</a><div class="pdesc">老派霓虹卡座，份量極大，一份歐姆蛋兩三人分。週四至週日 24 小時。不能訂位</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1128631,-115.1724846&amp;query_place_id=ChIJ3WIuWzfEyIAR3Cng9xOjScI" target="_blank" rel="noopener">Mon Ami Gabi</a><div class="pdesc">法式小酒館，露天座正對 Bellagio 噴泉。評價 4.7／3.3 萬則。九人務必先訂位</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.109557,-115.176169&amp;query_place_id=ChIJmwzbBjHEyIARC2_X1Nx4dQs" target="_blank" rel="noopener">Wicked Spoon 自助餐</a><div class="pdesc">早午餐約 $50。分裝小盤設計不易浪費，炸雞、蟹腳、亞洲麵食評價好</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1267914,-115.1649483&amp;query_place_id=ChIJS0B4ZMzCyIARhffosGsUFJk" target="_blank" rel="noopener">The Buffet at Wynn</a><div class="pdesc">Vegas 頂級自助餐，早午餐約 $60、晚餐約 $80。蟹腳與現做可麗餅是招牌</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1157296,-115.1732321&amp;query_place_id=ChIJj_wiEzvEyIARS5qTRmnig3Y" target="_blank" rel="noopener">Gordon Ramsay Hell's Kitchen</a><div class="pdesc">高價位。招牌威靈頓牛排、太妃布丁。務必提前訂位</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1274409,-115.1979755&amp;query_place_id=ChIJaVPO-9HGyIARgoJsy3ywWlE" target="_blank" rel="noopener">Taiwan Deli 台灣小吃</a><div class="pdesc">中國城 · 7:00–14:00｜台式早餐，燒餅、小籠包、豆漿、花生米漿</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1254417,-115.1965722&amp;query_place_id=ChIJQWKkSqTGyIAR8g8b9eWwXxc" target="_blank" rel="noopener">Noodle Pot</a><div class="pdesc">中國城 · 牛肉麵與牛肉捲餅評價極好，價位親民</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1259787,-115.1976616&amp;query_place_id=ChIJ2b6u1ELHyIAR7hQBOBh-9Bg" target="_blank" rel="noopener">Pot on Fire 台式火鍋</a><div class="pdesc">中國城 · 評價 4.8。台式小火鍋，有臭豆腐、鹹酥雞鍋</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1432752,-115.2674812&amp;query_place_id=ChIJ192cPZbAyIAR_AFolkqVYhY" target="_blank" rel="noopener">Krazy Buffet</a><div class="pdesc">離 Strip 較遠的平價亞洲自助餐，蟹腳、壽司、熱炒都有</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1255336,-115.1952996&amp;query_place_id=ChIJQ5ABxaXGyIAR2dW4kza2wg4" target="_blank" rel="noopener">99 Ranch Market 大華超市</a><div class="pdesc">中國城 · 台灣進口零食、泡麵、水果。長輩想吃點熟悉的可以來</div></div>
+  <h2>衣 · 購物</h2>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1042632,-115.172375&amp;query_place_id=ChIJnzcfajPEyIAR75tdaM6jPE4" target="_blank" rel="noopener">Ross Dress for Less（最大間）</a><div class="pdesc">3771 S LV Blvd · 8:00–23:00｜兩層樓，一樓女裝二樓男裝。停車前 2 小時 $20</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1332013,-115.1633993&amp;query_place_id=ChIJbWFKGW3EyIARqDgZGKV6Npw" target="_blank" rel="noopener">Ross Dress for Less（3001 號）</a><div class="pdesc">行李箱選擇多。⚠️ 只能停該商場車位，違停會被拖吊</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1636508,-115.1577492&amp;query_place_id=ChIJl8rr6pbDyIARIKXeAEgzMeU" target="_blank" rel="noopener">Las Vegas North Premium Outlets</a><div class="pdesc">10:00–20:00（週日至 19:00）｜Nike、Coach、UGG。停車 $5，下載 Simon App 領折扣碼</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1223898,-115.1674242&amp;query_place_id=ChIJ5VWO1j3EyIAR6Rt0b_ZeVUs" target="_blank" rel="noopener">Grand Canal Shoppes 大運河購物中心</a><div class="pdesc">威尼斯人內，室內仿威尼斯運河與藍天穹頂。不買也值得逛</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1033079,-115.172488&amp;query_place_id=ChIJRaUjXEjFyIAR3bjcbIKdr8M" target="_blank" rel="noopener">M&amp;M'S Las Vegas</a><div class="pdesc">四層樓巧克力牆，可自選顏色混搭。小孩會瘋掉</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1036811,-115.1725008&amp;query_place_id=ChIJ3R2hNzPEyIARH9rdo52qpYI" target="_blank" rel="noopener">Coca-Cola Store</a><div class="pdesc">M&amp;M's 隔壁。二樓可試喝世界各國口味可樂拼盤</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1715482,-115.1627244&amp;query_place_id=ChIJp9ZTNLnDyIAR46EJUHk3e2M" target="_blank" rel="noopener">Costco Business Center</a><div class="pdesc">離 outlet 最近。⚠️ 需會員卡；台灣好市多卡可通用</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1050745,-115.172489&amp;query_place_id=ChIJOWVfcTPEyIAR4BkLkPt81h0" target="_blank" rel="noopener">Walgreens（Strip 上）</a><div class="pdesc">24 小時。水、零食、藥品比飯店內便宜很多</div></div>
+  <h2>住 · 依推薦順序</h2>
+  <div class="note">Strip 由南到北約 6.8 公里。<b>南段</b>＝Mandalay Bay 至 MGM Grand，離機場最近；<b>中段</b>＝Bellagio、Caesars 一帶，噴泉與名店集中；<b>北段</b>＝威尼斯人、Wynn 至 Sahara。</div>
+
+  <div class="card">
+    <a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1036224,-115.1675744&amp;query_place_id=ChIJJQ6Ck8zFyIARfxB2vQVF2Z0" target="_blank" rel="noopener">① MGM Grand ★ 最推</a>
+    <div class="pdesc"><b>南段</b>（Tropicana 路口）· 距機場約 10 分鐘<br>
+    房間寬敞、適合家庭，單軌電車站就在館內，帶長輩移動最方便。品質與價格平衡最好。步行可到 M&amp;M's、可口可樂店、全美最大 In-N-Out。</div>
+  </div>
+
+  <div class="card">
+    <a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1247462,-115.1720827&amp;query_place_id=ChIJswuaqjrEyIARE0cTvGmUiwk" target="_blank" rel="noopener">② Treasure Island</a>
+    <div class="pdesc"><b>北段偏中</b>（Spring Mountain 路口）· 位置最好走<br>
+    隔壁就是威尼斯人與大運河購物中心，走到 Bellagio 噴泉約 15 分鐘。Junior Suite 有兩套衛浴，九人早上不用搶廁所。開車到中國城僅 10 分鐘。</div>
+  </div>
+
+  <div class="card">
+    <a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.09551,-115.1760672&amp;query_place_id=ChIJR7RcPs7FyIAROAHQry50Wgs" target="_blank" rel="noopener">③ Luxor Hotel &amp; Casino</a>
+    <div class="pdesc"><b>最南端</b>· 離機場最近<br>
+    金字塔造型本身就是景點，房間尺寸不錯。有鐵達尼號展覽，與 Excalibur、Mandalay Bay 之間有免費電車。比 Excalibur 新一些。</div>
+  </div>
+
+  <div class="card">
+    <a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.0987973,-115.1754312&amp;query_place_id=ChIJzZtJhM3FyIAR6eHpF4xTR68" target="_blank" rel="noopener">④ Excalibur Hotel &amp; Casino</a>
+    <div class="pdesc"><b>最南端</b>· 緊鄰 Luxor<br>
+    Strip 上最便宜的選擇之一。城堡造型、館內有大型電玩中心，三個孩子會喜歡。缺點是裝潢老舊，有評論提到地毯磨損與異味。</div>
+  </div>
+
+  <div class="card">
+    <a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1187296,-115.1866684&amp;query_place_id=ChIJX8LqCCDEyIARtXpjW9_P7YQ" target="_blank" rel="noopener">⑤ Rio Hotel &amp; Casino</a>
+    <div class="pdesc"><b>Strip 外</b>（I-15 以西，約 8 分鐘車程）<br>
+    房間非常大、免費停車，平日房價最低。但走路到 Strip 要 30 分鐘，且有評論提到周邊環境一般。適合會租車的人。</div>
+  </div>
+
+  <div class="note"><b>⚠️ Circa Resort 不能訂</b>——該飯店為 21 歲以上限定，你們帶三個孩子無法入住。</div>
+
+  <h2>行 · 交通與景點</h2>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.0830907,-115.1482238&amp;query_place_id=ChIJXZwEH5_FyIARHh7EHiRZE0c" target="_blank" rel="noopener">Harry Reid 國際機場 LAS</a><div class="pdesc">距 Strip 僅 10 分鐘車程，是全美離市中心最近的機場之一</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1222724,-115.1594555&amp;query_place_id=ChIJK9Wca0HEyIARGNU1aBIuaes" target="_blank" rel="noopener">Las Vegas Monorail 單軌電車</a><div class="pdesc">串連 MGM Grand 到 Sahara，避開 Strip 步行距離（實際比看起來遠很多）</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1127187,-115.1739109&amp;query_place_id=ChIJswuaqjrEyIAR1vBx3GxKR-I" target="_blank" rel="noopener">Bellagio 音樂噴泉</a><div class="pdesc">免費。傍晚起每 15 分鐘一場，全家適合</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1119912,-115.1765648&amp;query_place_id=ChIJSYKEyTrEyIARJZPSoDxr_MY" target="_blank" rel="noopener">Bellagio 植物園</a><div class="pdesc">免費，就在噴泉旁。季節性花藝主題，評價 4.8。1 月底常換上農曆年生肖展</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1705172,-115.1436468&amp;query_place_id=ChIJy7l0J6DDyIARQozw76NxnyU" target="_blank" rel="noopener">Fremont Street Experience</a><div class="pdesc">舊城區，頭頂 LED 天幕光影秀與街頭表演</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=35.8392389,-115.270961&amp;query_place_id=ChIJU3W6nXc1z4AR3TzVE7_68ZE" target="_blank" rel="noopener">Seven Magic Mountains 七彩魔石</a><div class="pdesc">車程 25 分。沙漠中的彩色堆疊巨石，免費、超好拍。早上人少</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.4756593,-114.5383925&amp;query_place_id=ChIJ9asMyitryYARdbB8r1pzXUw" target="_blank" rel="noopener">Valley of Fire 火焰谷 ★</a><div class="pdesc">車程 45 分。紅色砂岩地貌，Rainbow Vista Trail 地勢平坦，長輩也能走</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1944273,-115.4382967&amp;query_place_id=ChIJNYWglQe9yIARTLL8Kh3YznQ" target="_blank" rel="noopener">Red Rock Canyon 紅岩峽谷</a><div class="pdesc">車程 30 分。13 英里單向景觀環道，開車繞一圈約 45 分鐘</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.0160655,-114.7377325&amp;query_place_id=ChIJS6GCf0kryYARN94pvdBZnQg" target="_blank" rel="noopener">Hoover Dam 胡佛水壩</a><div class="pdesc">車程 45 分。可下到渦輪機層參觀，停車 $10</div></div>
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.011943,-113.8108372&amp;query_place_id=ChIJK0N3NakTzIAR5KnZMl6T5wA" target="_blank" rel="noopener">Grand Canyon West Skywalk</a><div class="pdesc">車程 2.5 小時。玻璃天空步道，可無限時停留。建議參加一日團</div></div>
+  <h2>實用提醒</h2>
+  <ul>
+    <li><b>度假村費</b>：飯店網頁標價不含 resort fee，每晚每房約 $40–55，訂房前務必看含稅總價</li>
+    <li><b>小費文化</b>：餐廳 15–20%、房務每晚 $3–5、行李員每件 $2。第一次來美國的人要先準備零錢</li>
+    <li><b>21 歲限制</b>：賭場區未滿 21 歲不可逗留，只能穿越。帶孩子走動線要留意</li>
+    <li><b>Strip 很長</b>：飯店之間看起來很近，實際走路可能 20–30 分鐘，善用單軌電車或 Uber</li>
+    <li><b>1 月天氣</b>：白天約 15°C、早晚 5–8°C，外套仍需要</li>
+    <li><b>人多要訂位</b>：九人用餐幾乎所有餐廳都須提前預約</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>阿拉斯加極光行程 · 2027 年 1–2 月<br>行程內容以旅行社最終出團通知為準</footer>
+
+<script>
+const tabs=[...document.querySelectorAll('.tabs button')];
+tabs.forEach(b=>b.addEventListener('click',()=>{
+  tabs.forEach(x=>{
+    const on=x===b;
+    x.setAttribute('aria-selected',on);
+    document.getElementById(x.dataset.t).hidden=!on;
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+}));
+</script>
+</body>
+</html>
