@@ -54,11 +54,10 @@ h1 em{font-style:normal;display:block;font-size:16px;font-weight:600;color:var(-
 .fact span{font-size:12px;color:var(--dim);letter-spacing:.06em;font-weight:600}
 
 nav{position:sticky;top:0;z-index:20;background:rgba(246,248,252,.97);border-bottom:2px solid var(--line)}
-.tabs{display:flex;overflow-x:auto;scrollbar-width:none;max-width:780px;margin:0 auto;padding:0 10px}
-.tabs::-webkit-scrollbar{display:none}
+.tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 0;max-width:780px;margin:0 auto;padding:8px 8px 6px}
 .tabs button{
-  flex:0 0 auto;background:none;border:0;color:var(--dim);font:inherit;font-size:15px;font-weight:600;
-  padding:15px 14px;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;
+  flex:1 1 auto;min-width:80px;background:none;border:0;color:var(--dim);font:inherit;font-size:15px;font-weight:600;
+  padding:9px 10px;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;
 }
 .tabs button[aria-selected="true"]{color:var(--aurora);border-bottom-color:var(--aurora);font-weight:800}
 .tabs button:focus-visible{outline:3px solid var(--aurora-2);outline-offset:-4px}
@@ -135,6 +134,7 @@ footer{text-align:center;font-size:12.5px;color:var(--dim);padding:36px 0 12px;f
   <button role="tab" aria-selected="false" data-t="p0">同行</button>
   <button role="tab" aria-selected="false" data-t="p2">交通</button>
   <button role="tab" aria-selected="false" data-t="p3">住宿</button>
+  <button role="tab" aria-selected="false" data-t="p8">極光</button>
   <button role="tab" aria-selected="false" data-t="p4">裝備</button>
   <button role="tab" aria-selected="false" data-t="p5">注意</button>
   <button role="tab" aria-selected="false" data-t="p7">Vegas</button>
@@ -288,41 +288,54 @@ footer{text-align:center;font-size:12.5px;color:var(--dim);padding:36px 0 12px;f
 
 <!-- 裝備 -->
 <section id="p4" hidden>
-  <h2>禦寒衣物</h2>
+  <h2>穿衣核心原則</h2>
+  <div class="note"><b>多層 + 好穿脫。</b>室外就層層疊上，一進車內或室內立刻脫掉外層。<b>出汗後衣服濕掉最難受，也最容易感冒</b>——這比單純穿厚更重要。1 月費爾班克斯平均約 -20°C，可能驟降到 -30°C 以下。</div>
+
+  <h2>由下而上分層</h2>
+  <div class="card">
+    <div class="row"><span class="k">腳部<br>最容易被忽略</span><span class="v">羊毛襪（保暖遠勝棉襪）<br>發熱鞋墊<br>中高筒防水防滑雪靴<br>尺寸挑大一點，留空間給厚襪</span></div>
+    <div class="row"><span class="k">腿部<br>重點在防風防水</span><span class="v">內層：保暖衛生褲<br>中層：加絨褲<br>外層：雪褲</span></div>
+    <div class="row"><span class="k">上身</span><span class="v">內層：發熱衣<br>中層：輕羽絨或加厚刷毛<br>外層：連帽長版厚羽絨</span></div>
+    <div class="row"><span class="k">頭部與手</span><span class="v">羊毛圍巾（護頸與臉）<br>滑雪手套：保暖＋防水＋可觸控<br>能蓋住耳朵的帽子</span></div>
+  </div>
+  <div class="note">外套不必追求品牌，能擋風、夠長、有帽子就夠用。</div>
+
+  <h2>保暖小物</h2>
   <ul>
-    <li>羽絨外套（長版為佳）</li>
-    <li>抓絨衣、發熱衣等中層</li>
-    <li>毛帽、圍巾、防風手套</li>
-    <li>防滑雪地靴</li>
-    <li>厚襪多備幾雙</li>
-    <li>墨鏡（雪地反光強）</li>
+    <li>暖暖包——貼身、口袋、鞋內都用得到，建議台灣先買好</li>
+    <li>保溫瓶</li>
+    <li>防風面罩</li>
+    <li>護唇膏與乳液——越冷越乾燥，這裡比想像中誇張</li>
   </ul>
 
   <h2>特定行程用</h2>
   <ul>
-    <li><b>泳衣</b> — 珍娜溫泉泡湯必備</li>
-    <li>暖暖包 — 極光木屋等待時間長</li>
-    <li>護唇膏、乳液 — 室內外溫差大、極乾燥</li>
+    <li><b>泳衣＋好穿脫的鞋</b>——珍娜溫泉必備</li>
+    <li>冰川健行：一般運動鞋可行，防水更佳，冰爪現場提供</li>
+    <li>行動電源——低溫下手機掉電極快</li>
   </ul>
 
-  <h2>拍極光</h2>
+  <h2>藥品</h2>
   <ul>
-    <li>相機與腳架</li>
-    <li>備用電池多帶，低溫掉電極快</li>
-    <li>記憶卡</li>
-    <li>手機保暖套或放內袋，避免瞬間關機</li>
-  </ul>
-
-  <h2>其他</h2>
-  <ul>
-    <li>轉接頭（美規）與行動電源</li>
-    <li>個人常備藥品</li>
-    <li>保溫瓶</li>
+    <li>感冒藥、消炎藥、過敏藥</li>
+    <li>暈車藥或暈車貼——迪納利與溫泉往返都是長車程</li>
+    <li>腸胃藥、OK 繃</li>
+    <li>個人常備處方藥（建議帶英文處方箋備查）</li>
   </ul>
 </section>
 
 <!-- 注意 -->
 <section id="p5" hidden>
+  <h2>各行程實用小撇步</h2>
+  <ul>
+    <li><b>極光號列車（1/23）</b>：全程約 12 小時，<b>只有車廂最後幾個座位有插座</b>，務必帶行動電源。沿途可能看到野生動物</li>
+    <li><b>狗拉雪橇（1/24）</b>：風打在臉上很冷，要比平常多穿一層，教練全程隨行</li>
+    <li><b>冰湖冰釣（1/25）</b>：木屋內有暖爐不會冷，釣到的魚導遊會現場烤給大家吃</li>
+    <li><b>珍娜溫泉（1/26）</b>：費爾班克斯區域唯一的室外天然溫泉，「身體泡在熱水裡、頭髮結冰」是這裡獨有的體驗</li>
+    <li><b>冰雕博物館</b>：調酒用冰杯裝，<b>喝完杯子可以帶走</b>，也可以拿到外面許願後摔碎。限 21 歲以上</li>
+    <li><b>馬塔努斯卡冰川（1/21）</b>：是阿拉斯加最容易接近的冰川之一，車可以直接開到冰川腳下</li>
+  </ul>
+
   <h2>行程強度</h2>
   <div class="card">
     <div class="row"><span class="k">1/21</span><span class="v">冰川雪地健行 2 小時</span></div>
@@ -365,8 +378,14 @@ footer{text-align:center;font-size:12.5px;color:var(--dim);padding:36px 0 12px;f
   <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1174161,-115.1699447&amp;query_place_id=ChIJoxirzyrFyIARHdJoX3i1NJg" target="_blank" rel="noopener">In-N-Out Burger（Strip 中段）</a><div class="pdesc">3545 S Las Vegas Blvd · 雙層堡＋薯條＋飲料約 $11</div></div>
   <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1336884,-115.1632833&amp;query_place_id=ChIJo2QZEG3EyIARuHyQ4XC29RY" target="_blank" rel="noopener">Peppermill Restaurant</a><div class="pdesc">老派霓虹卡座，份量極大，一份歐姆蛋兩三人分。週四至週日 24 小時。不能訂位</div></div>
   <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1128631,-115.1724846&amp;query_place_id=ChIJ3WIuWzfEyIAR3Cng9xOjScI" target="_blank" rel="noopener">Mon Ami Gabi</a><div class="pdesc">法式小酒館，露天座正對 Bellagio 噴泉。評價 4.7／3.3 萬則。九人務必先訂位</div></div>
-  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.109557,-115.176169&amp;query_place_id=ChIJmwzbBjHEyIARC2_X1Nx4dQs" target="_blank" rel="noopener">Wicked Spoon 自助餐</a><div class="pdesc">早午餐約 $50。分裝小盤設計不易浪費，炸雞、蟹腳、亞洲麵食評價好</div></div>
-  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1267914,-115.1649483&amp;query_place_id=ChIJS0B4ZMzCyIARhffosGsUFJk" target="_blank" rel="noopener">The Buffet at Wynn</a><div class="pdesc">Vegas 頂級自助餐，早午餐約 $60、晚餐約 $80。蟹腳與現做可麗餅是招牌</div></div>
+
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1267914,-115.1649483&amp;query_place_id=ChIJS0B4ZMzCyIARhffosGsUFJk" target="_blank" rel="noopener">The Buffet at Wynn ★ 長年前三</a><div class="pdesc"><span class="tag t-kid">律帆推薦</span><br>每日 8:00–21:00 · 早午餐約 $60、晚餐約 $80<br>環境華麗如宮殿，帝王蟹、鮮蝦與甜點區是招牌，現做可麗餅評價極好。適合拍照、想吃得優雅。</div></div>
+
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1159097,-115.1762366&amp;query_place_id=ChIJvd3IWSPEyIARGJvpSzaMF3k" target="_blank" rel="noopener">Bacchanal Buffet ★ 長年前三</a><div class="pdesc"><span class="tag t-kid">律帆推薦</span><br>凱撒宮內 · 週一至四 14:30–21:00，週五至日 9:00–22:00<br>約 $95＋小費，用餐限時 90 分鐘。250 種以上菜色、九大料理區，現切和牛、龍蝦、生魚片。有評論說蟹腳處理得極好、一掰就開。想吃到撐選這家。</div></div>
+
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.109557,-115.176169&amp;query_place_id=ChIJmwzbBjHEyIARC2_X1Nx4dQs" target="_blank" rel="noopener">Wicked Spoon</a><div class="pdesc">每日 8:00–14:00 · 約 $50<br>小份精緻擺盤，一次能嘗很多種口味，不容易浪費。炸雞、蟹腳、亞洲麵食評價好。</div></div>
+
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1133972,-115.1764057&amp;query_place_id=ChIJCSs1ZDLEyIARkywBhGB82Zs" target="_blank" rel="noopener">The Buffet at Bellagio</a><div class="pdesc">每日 8:00–14:00（週六日至 20:00）· 平日約 $45、週末約 $55<br>老牌經典，生蠔、帝王蟹與現場烹調牛排是招牌。<b>近期評價落差大</b>，有食客直言不如 Bacchanal 且裝潢老舊，若三選一可以先跳過。</div></div>
   <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1157296,-115.1732321&amp;query_place_id=ChIJj_wiEzvEyIARS5qTRmnig3Y" target="_blank" rel="noopener">Gordon Ramsay Hell's Kitchen</a><div class="pdesc">高價位。招牌威靈頓牛排、太妃布丁。務必提前訂位</div></div>
   <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1274409,-115.1979755&amp;query_place_id=ChIJaVPO-9HGyIARgoJsy3ywWlE" target="_blank" rel="noopener">Taiwan Deli 台灣小吃</a><div class="pdesc">中國城 · 7:00–14:00｜台式早餐，燒餅、小籠包、豆漿、花生米漿</div></div>
   <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1254417,-115.1965722&amp;query_place_id=ChIJQWKkSqTGyIAR8g8b9eWwXxc" target="_blank" rel="noopener">Noodle Pot</a><div class="pdesc">中國城 · 牛肉麵與牛肉捲餅評價極好，價位親民</div></div>
@@ -428,6 +447,50 @@ footer{text-align:center;font-size:12.5px;color:var(--dim);padding:36px 0 12px;f
   <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1944273,-115.4382967&amp;query_place_id=ChIJNYWglQe9yIARTLL8Kh3YznQ" target="_blank" rel="noopener">Red Rock Canyon 紅岩峽谷</a><div class="pdesc">車程 30 分。13 英里單向景觀環道，開車繞一圈約 45 分鐘</div></div>
   <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.0160655,-114.7377325&amp;query_place_id=ChIJS6GCf0kryYARN94pvdBZnQg" target="_blank" rel="noopener">Hoover Dam 胡佛水壩</a><div class="pdesc">車程 45 分。可下到渦輪機層參觀，停車 $10</div></div>
   <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.011943,-113.8108372&amp;query_place_id=ChIJK0N3NakTzIAR5KnZMl6T5wA" target="_blank" rel="noopener">Grand Canyon West Skywalk</a><div class="pdesc">車程 2.5 小時。玻璃天空步道，可無限時停留。建議參加一日團</div></div>
+  <h2>秀 · 表演</h2>
+  <div class="note">九人同行務必<b>提早訂票</b>才坐得在一起。各秀每週固定休演日不同，且會調整，<b>訂票前請再確認當天有無場次</b>。</div>
+
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.121217,-115.1620404&amp;query_place_id=ChIJQ4t9gYLFyIAR71bgg5iKwUI" target="_blank" rel="noopener">Sphere 球體劇場 ★</a><div class="pdesc"><span class="tag t-kid">律帆推薦必去</span><br>
+  《來自地球的明信片》Postcard from Earth，約 90 分鐘。16K 巨型環繞螢幕，座椅會隨劇情震動，還有風、氣味等效果，現場音量約 85–95 分貝。<b>建議 6 歲以上</b>——你們三個孩子都沒問題。<br>
+  票價含手續費與停車約 $150 上下。有觀眾建議坐後排，包覆感較舒服、不易暈眩。<br>
+  ⚠️ 檔期會輪替，訂票時確認當天播放的是哪一部。</div></div>
+
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1133899,-115.1769581&amp;query_place_id=ChIJ7aX4zDrEyIARpCKYgD-T6DY" target="_blank" rel="noopener">O 秀 · 太陽劇團 ★ 首選</a><div class="pdesc">Bellagio · 評價 4.5<br>
+  水上舞台結合高空特技與水下特技，90 分鐘毫無冷場。劇場較小巧、離舞台近。<b>全家都適合</b>，第一次來 Vegas 選這個最穩。前排有機會被水濺到。</div></div>
+
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.09551,-115.1760672&amp;query_place_id=ChIJ9zObZjLEyIARtcXNw9ReLPs" target="_blank" rel="noopener">藍人秀 Blue Man Group ★ 親子首選</a><div class="pdesc">Luxor · 每日 17:00–21:30 · 評價 4.4<br>
+  <b>無年齡限制、無語言隔閡</b>，全程沒有對白，英文不好也完全看得懂——這點對月英女士和孩子最友善。互動性強、音樂節奏感十足，票價約 $50 起，是這份清單裡最划算的。<br>
+  ⚠️ 音量大、有閃光燈效果。</div></div>
+
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.103677,-115.167754&amp;query_place_id=ChIJjeALNzPEyIARxTPnabsufUg" target="_blank" rel="noopener">KÀ 秀 · 太陽劇團</a><div class="pdesc">MGM Grand · 評價 4.5 · <b>週四、週五休演</b><br>
+  360° 旋轉機械舞台，垂直牆面打鬥場面是最大亮點，東方武術結合史詩劇情。視覺震撼度最高。有觀眾提到劇情較難跟上，但特技本身值回票價。<br>
+  你們的日期中 <b>1/30 六、1/31 日</b> 有演出。</div></div>
+
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.093093,-115.1767571&amp;query_place_id=ChIJvbBK38_FyIARRvBN0otyAW4" target="_blank" rel="noopener">Michael Jackson ONE</a><div class="pdesc">Mandalay Bay · 評價 4.4 · <b>週二、週三休演</b><br>
+  太陽劇團打造的 MJ 主題秀，經典金曲搭配雜技與空中特技。有觀眾建議坐後排一點，才看得到空中演出與無人機的全貌。</div></div>
+
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1275412,-115.1650838&amp;query_place_id=ChIJHxgITBPFyIARn8gc1PRVQ48" target="_blank" rel="noopener">Awakening 覺醒秀</a><div class="pdesc">Wynn · 評價 4.0 · <b>週三、週四休演</b><br>
+  沉浸式舞台與光影藝術，服裝與舞台設計評價極高，每個座位配有獨立喇叭。有觀眾覺得特技段落偏少、以視覺為主。</div></div>
+
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1212129,-115.1693652&amp;query_place_id=ChIJ-epd9D7EyIAR0_A83lJWLf0" target="_blank" rel="noopener">Shin Lim《Limitless》魔術秀</a><div class="pdesc">威尼斯人劇場 · 場地評價 4.7<br>
+  兩度奪下《美國達人秀》冠軍的近景紙牌魔術師。劇場座位視野普遍良好。適合喜歡魔術、想看細膩表演的人。</div></div>
+
+  <div class="card"><a class="plink" href="https://www.google.com/maps/search/?api=1&amp;query=36.1019739,-115.168917&amp;query_place_id=ChIJAQAAty_EyIARpHv3jtzMAN0" target="_blank" rel="noopener">David Copperfield 大衛魔術</a><div class="pdesc">MGM Grand · 評價 4.0<br>
+  ⚠️ <b>近期評價明顯下滑</b>，多位觀眾反映節奏偏慢、談話比重過高、魔術橋段變少，也有人提到未演出壓軸。若想看魔術，Shin Lim 可能是更好的選擇。</div></div>
+
+  <div class="note"><b>⚠️ Fantasy 秀不適合這趟。</b>該秀為<b>成人歌舞秀、限 18 歲以上</b>，三個孩子無法入場。若大人另外安排夜間活動再考慮。</div>
+
+  <div class="card">
+    <div class="row"><span class="k">初次來 Vegas</span><span class="v">O 秀</span></div>
+    <div class="row"><span class="k">帶孩子與長輩</span><span class="v">藍人秀</span></div>
+    <div class="row"><span class="k">追求視覺震撼</span><span class="v">KÀ 秀</span></div>
+    <div class="row"><span class="k">喜歡魔術</span><span class="v">Shin Lim</span></div>
+    <div class="row"><span class="k">MJ 歌迷</span><span class="v">MJ ONE</span></div>
+  </div>
+  <div class="note"><b>建議組合：</b>律帆說「Sphere 必去、Buffet 選一個、真人秀選一個」。以你們九人＋孩子＋長輩的組合，真人秀選 <b>O 秀</b>（最穩、全家適合）或 <b>藍人秀</b>（最省、無語言隔閡）都很合適。
+
+</div>
+
   <h2>實用提醒</h2>
   <ul>
     <li><b>度假村費</b>：飯店網頁標價不含 resort fee，每晚每房約 $40–55，訂房前務必看含稅總價</li>
@@ -436,6 +499,41 @@ footer{text-align:center;font-size:12.5px;color:var(--dim);padding:36px 0 12px;f
     <li><b>Strip 很長</b>：飯店之間看起來很近，實際走路可能 20–30 分鐘，善用單軌電車或 Uber</li>
     <li><b>1 月天氣</b>：白天約 15°C、早晚 5–8°C，外套仍需要</li>
     <li><b>人多要訂位</b>：九人用餐幾乎所有餐廳都須提前預約</li>
+  </ul>
+</section>
+
+<!-- 極光 -->
+<section id="p8" hidden>
+  <h2>你們的四次機會</h2>
+  <div class="card">
+    <div class="row"><span class="k">1/23 週六</span><span class="v">極光木屋（列車抵達當晚）</span></div>
+    <div class="row"><span class="k">1/24 週日</span><span class="v">Cleary Summit 玻璃屋</span></div>
+    <div class="row"><span class="k">1/25 週一</span><span class="v">Cleary Summit 玻璃屋</span></div>
+    <div class="row"><span class="k">1/26 週二</span><span class="v">極光木屋（溫泉日當晚）</span></div>
+  </div>
+  <div class="note">費爾班克斯位於極光帶正下方，一年超過 200 個夜晚有機會看到，是全球公認最頂級的觀測地之一。<b>安克雷奇（1/20–1/22）緯度較低、市區光害重，基本看不到</b>，那三晚可以安心睡覺。</div>
+
+  <h2>最佳時段</h2>
+  <div class="card">
+    <div class="row"><span class="k">主要時段</span><span class="v">晚間 22:00 – 凌晨 02:00</span></div>
+    <div class="row"><span class="k">磁暴日</span><span class="v">可延續至凌晨 3–4 點</span></div>
+    <div class="row"><span class="k">極光季</span><span class="v">8 月底 – 4 月中</span></div>
+  </div>
+
+  <h2>預報 APP</h2>
+  <div class="card">
+    <div class="row"><span class="k">推薦</span><span class="v">Aurora<br>Northern Eye Aurora<br>Aurora Fcst</span></div>
+  </div>
+  <div class="note"><b>KP 指數怎麼看：</b>1–2 級是靜態微光，肉眼可能只看到淡淡一道白；5 級以上開始舞動；<b>7 級以上就是大爆發</b>，值得把全家挖起來。玻璃屋兩晚可以睡前設鬧鐘，半夜起來看一眼。</div>
+
+  <h2>拍攝準備</h2>
+  <ul>
+    <li><b>廣角鏡頭</b>與<b>腳架</b>——極光範圍大，手持一定糊</li>
+    <li><b>備用電池多帶</b>，低溫掉電極快，貼身放內袋保溫</li>
+    <li>快門線，避免按快門時震動</li>
+    <li>相機保暖套，防止機身過冷當機</li>
+    <li>手機用夜景模式或長曝，近年手機拍極光效果已相當好</li>
+    <li>從室外進室內時，先把相機裝進密封袋再進門，避免結露</li>
   </ul>
 </section>
 
